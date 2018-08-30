@@ -1,0 +1,202 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url('/assets/stripe3.jpg') repeat-y center;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkgray;
+  margin: 0;
+  font-size: 14px;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+  overflow: hidden;
+  max-width: 990px;
+  margin: 0 auto;
+  min-height: 100px;
+}
+
+.hand {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.fa-hand-point-right {
+  font-size: 56px;
+}
+
+.fa-hand-point-right:hover {
+  font-size: 66px;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 400;
+}
+
+router-outlet {
+  display: none;
+}
+
+#overlay {
+  background: #000;
+  opacity: .6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+button {
+  background-color: #f4df8c;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-shadow: none;
+  box-shadow: none;
+  width: auto;
+  line-height: 1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover {
+  background: orange;
+}
+
+button.delete {
+  background: red;
+  color: white;
+}
+
+button.cancel {
+  background: orange;
+  color: white;
+}
+
+button.ok {
+  background: green;
+  color: white;
+}
+
+.linkText, .linkText:active, .linkText:visited, .linkIcon {
+  color: #2c56a7;
+}
+
+.linkText:hover, .linkIcon:hover {
+  color: #192844;
+}
+
+.linkItem {
+  text-decoration: underline;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fas {
+  text-decoration: none;
+}
+
+.fa-chevron-down, .fa-chevron-up, .fa-times-circle, .fa-pencil-square-o {
+  padding-right: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #efefef;
+  text-align: left;
+  padding: 8px;
+}
+
+td .capitalise, th .capitalise {
+  text-transform: capitalize;
+}
+
+tr:hover, tr:nth-child(even):hover {
+  background: #F3F4D5;
+}
+
+tr:nth-child(even) {
+  background-color: #e4e4e4;
+}
+
+.alert {
+  margin-top: -10px;
+  width: 100%;
+  padding: 12px 20px;
+  text-align: left;
+}
+.alert-danger {
+  background: #F2DEDE;
+  color:red;
+}
+
+.full {
+  width: 100%
+}
+
+.right {
+  text-align: right;
+}
+
+.card {
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 #cbcbcb;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  position: relative;
+  min-height: 100px;
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1) {
+
+}
