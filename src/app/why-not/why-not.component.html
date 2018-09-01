@@ -1,31 +1,51 @@
 <div class="relative">
-    <div class="hand" routerLink="/what" routerLinkActive="active">
-      <i class="fas fa-hand-point-right"></i>
-    </div>
-    <h1>Why not?</h1>
-    <h4 class="wwwh">Why not build an application as a SPA?</h4>
-    <h2>The disadvantages of SPAs</h2>
-    <p>
-      A single page application is simple to deploy if compared to more traditional server-side rendered applications, it's really
-      just one index.html file, with a CSS bundle and a Javascript bundle. These 3 static files can be uploaded to any static
-      content server like Apache, Nginx, Amazon S3 or Firebase Hosting.
-    </p>
-    <h3>The backend data</h3>
-    <p>
-      The application will need to make calls to the backend to get its data, but that is a separate server that can be built with
-      a different technology like Java, Scala, PHP or Node.
-    </p>
-    <h3>SPA versioning in production</h3>
-    <p>
-      Another advantage of deploying our frontend as a single page application is versioning and rollback. All we have to do is
-      to version our build output (that produces the CSS and JS bundles). We can configure the server that is serving our SPA
-      with a parameter that specifies which version of the frontend application to build, it's as simple as that!
-    </p>
-    <p>
-      This type of deployment scales very well, static content servers like Nginx can scale for a very large number of users.
-    </p>
-    <p>
-      This type of deployment and versioning is only valid for the frontend part of our application and does not apply to the backend
-      server. But as frontend changes more rapidly than backend, it's an important advantage to have.
-    </p>
+  <div class="hand" routerLink="/what" routerLinkActive="active">
+    <i class="fas fa-hand-point-right"></i>
   </div>
+  <h1>Why not?</h1>
+  <h4 class="wwwh">Why not build an application as a SPA?</h4>
+  <h2>The disadvantages of SPAs</h2>
+  <p>
+    The two main disadvantages of SPAs are the initial page load and SEO.
+  </p>
+  <h3>Initial page load</h3>
+  <p>
+    Typically a SPA will load all the things it needs to run the application when the user first lands on the website. Nowadays
+    with SPAs becoming much more established the propriotors have come up with solutions to this problem. In Angular it is
+    very easy to lazy load items so that you are not downloading everything at once, thus drastically reducing the wait time
+    for the user.
+  </p>
+  <p>
+    Service workers and web workers can be employed to make full use of the browser cache, files can be minimised and tree shaking
+    methods can be used in building the production code reducing the KBs to a speedy response.
+  </p>
+  <h3>The hefty CEC website</h3>
+  <p>At the time of writing the current CEC home page weighs in at a whopping 760odd KB!
+  </p>
+  <ul>
+    <li>Home page - over 760kb</li>
+    <li>Login page - over 620kb</li>
+    <li>Results page - over 220kb</li>
+    <li>Welcome back page - over 270kb</li>
+  </ul>
+  <h3>SEO</h3>
+  <p>
+    In the early days of the web, Googlebot (Google's search engine crawler) would only crawl the static HTML provided in a page.
+    It was announced in 2014, however, that Googlebot would now attempt to render JavaScript before it began crawling. To
+    help debug any issues with rendering a JavaScript-modified page, Google provided webmasters with the Fetch As Google tool,
+    which shows a snapshot of what Googlebot sees at a particular URL.
+  </p>
+  <p>
+    There are a number of solutions to optimise a SPAs SEOness, these include pre-rendering and server side rendering. Pre-rendering
+    is where you run the app with a headless browser in your development environment, snapshot the page output, and substitute
+    your HTML files with this snapshot in the server’s response. Server-side rendering (SSR) is where a page is rendered
+    by the web server as part of the server request/response cycle.
+  </p>
+  <h3>Money Saving Expert</h3>
+  <p>
+    MSM and CEC already have a fantastic SEO tool in the form of the MSE website. Whilst it makes sense to have the MSE website
+    as an MPA for SEO reasons as it has many, many pages that would require a lot of work to convert. The price comparison
+    websites do not need to be MPAs as they have so few pages, in CEC there is a landing page, a registration page, a results
+    page, an edit page and a thank you page a total of five pages.
+  </p>
+</div>

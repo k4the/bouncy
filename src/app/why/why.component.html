@@ -4,28 +4,31 @@
   </div>
   <h1>Why?</h1>
   <h4 class="wwwh">Why build an application as a SPA?</h4>
-  <h2>The production deployment advantages of SPAs</h2>
+  <h2>The advantages of SPAs</h2>
+  <h3>The production and deployment advantages of SPAs</h3>
   <p>
     A single page application is simple to deploy if compared to more traditional server-side rendered applications, it's really
     just one index.html file, with a CSS bundle and a Javascript bundle. These 3 static files can be uploaded to any static
     content server like Apache, Nginx, Amazon S3 or Firebase Hosting.
   </p>
-  <h3>The backend data</h3>
-  <p>
-    The application will need to make calls to the backend to get its data, but that is a separate server that can be built with
-    a different technology like Java, Scala, PHP or Node.
-  </p>
   <h3>SPA versioning in production</h3>
   <p>
     Another advantage of deploying our frontend as a single page application is versioning and rollback. All we have to do is
     to version our build output (that produces the CSS and JS bundles). We can configure the server that is serving our SPA
-    with a parameter that specifies which version of the frontend application to build, it's as simple as that!
+    with a parameter that specifies which version of the frontend application to build. This type of deployment scales very
+    well with static content servers like Nginx can scale for a very large number of users.
   </p>
+  <h3>Less work in the backend</h3>
   <p>
-    This type of deployment scales very well, static content servers like Nginx can scale for a very large number of users.
+    Multiple Page Applications don’t allow you to use the same backend for mobile and web application, this means double the
+    work in the backend. Whereas with a Single Page Application, you only have one RESTful API that both mobile and web can
+    consume.
   </p>
+  <h3>Better user experience</h3>
   <p>
-    This type of deployment and versioning is only valid for the frontend part of our application and does not apply to the backend
-    server. But as frontend changes more rapidly than backend, it's an important advantage to have.
+    SPAs create a snappier user experience as pages don't have to be reloaded every time. New features can be developed much
+    more quickly with SPAs as it takes less time for developers to develop them, testers to test them and dev ops to deploy
+    them, contributing to a fresher user experience. Existing features can be speedily modified in the frontend, quite often
+    with no work in the backend.
   </p>
 </div>

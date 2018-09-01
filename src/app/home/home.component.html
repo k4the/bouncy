@@ -1,5 +1,5 @@
 <div class="relative home">
-  <div class="hand" routerLink="/what">
+  <div class="hand" (click)="gotoPage()" (mouseover)="spin()" [@spin]="spinState">
     <i class="fas fa-hand-point-right"></i>
   </div>
   <h1>SPA versus MPA</h1>
