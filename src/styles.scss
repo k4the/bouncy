@@ -9,10 +9,10 @@ html {
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: darkgray;
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 main {
@@ -26,17 +26,6 @@ main {
   max-width: 990px;
   margin: 0 auto;
   min-height: 100px;
-}
-
-.hand {
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 10px;
-}
-
-.fa-hand-point-right {
-  font-size: 56px;
 }
 
 .capitalise {
@@ -54,6 +43,47 @@ main {
 
 h1, h2, h3, h4, h5 {
   font-weight: 400;
+}
+
+h3, h4, h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 6px;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+  max-width: 990px;
+  margin: 0 auto;
+  min-height: 100px;
+  padding: 10px 15px;
+
+  h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 32px;
+  }
+
+  h1, h2 {
+    margin-bottom: 0;
+  }
 }
 
 router-outlet {
@@ -185,11 +215,42 @@ tr:nth-child(even) {
   min-height: 100px;
 }
 
+.future {
+  background: url('/assets/future-small.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bgColour {
+  background: white;
+}
+.relativeP {
+  position: relative;
+}
+
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
 
   .container {
     display: flex;
     flex-direction: row;
+  }
+
+  .page {
+    position: relative;
+    overflow: hidden;
+    max-width: 990px;
+    margin: 0 auto;
+    min-height: 100px;
+  }
+
+  .future {
+    background: url('/assets/future.jpg') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 

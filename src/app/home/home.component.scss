@@ -1,5 +1,18 @@
-.home {
-    .wwwh {
-        font-size: 18px;
-    }
+.snail {
+  position: absolute;
+  top: -18px;
+  z-index: 20;
 }
+.afterSnail {
+  margin-left: 60px;
+}
+
+.washing {
+  position: absolute;
+  top: -45px;
+  z-index: 20;
+}
+.afterWashing {
+  margin-left: 75px;
+}
+

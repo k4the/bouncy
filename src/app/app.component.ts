@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { slideLeft  } from './slide-left.animation';
-import { slideDown  } from './slide-down.animation';
+import { Location } from '@angular/common';
+import { slideLeft } from './animations/slide-left.animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [slideLeft, slideDown ]
+  animations: [slideLeft]
 })
 export class AppComponent {
-  title = 'bouncy';
+
+  constructor(private location: Location) {}
 
   getState(outlet) {
     return outlet.activatedRouteData.state;

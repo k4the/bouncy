@@ -1,11 +1,15 @@
 <header>
-  <nav class="container">
-    <div class="flex1">
-      <a class="navItem" routerLink="/" routerLinkActive="active">Home</a>
-      <a class="navItem" routerLink="/what" routerLinkActive="active">what</a>
-      <a class="navItem" routerLink="/references" routerLinkActive="active">References</a>
-      <a class="navItem" routerLink="/inspiration" routerLinkActive="active">Inspiration</a>
+  <div class="hand back" (click)="backPage()" (mouseover)="spin()" [@spin]="spinState">
+    <i class="fas fa-hand-point-left"></i>
+  </div>
+  <div class="hand next" (click)="nextPage()" (mouseover)="spin()" [@spin]="spinState">
+      <i class="fas fa-hand-point-right"></i>
+    </div>
+  <i class="fas fa-bars" id="navBut" (click)="toggleMenu($event)"></i>
+  <nav class="container" [@slideDown]="slideDownState">
+    <div *ngFor="let route of appRoutes; index as i" class="navItemContainer">
+      <a *ngIf="i === 0" class="navItem home" routerLink="/" (click)="goto('/')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fas fa-home"></i></a>
+      <a *ngIf="(i > 0) && (i < appRoutes.length - 1)" [routerLink]="route.path" class="navItem" [ngClass]="{ 'second': i === 1}" (click)="goto(route.path)" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ route.data.name }}</a>
     </div>
   </nav>
-  <!-- [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" -->
 </header>

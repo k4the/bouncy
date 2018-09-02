@@ -1,9 +1,9 @@
 import { WhyNotComponent } from './why-not/why-not.component';
 import { WhyComponent } from './why/why.component';
-import { AppRoutingModule } from './app.routing.module';
+import { AppRoutes } from './app.routing';
 import { WhatComponent } from './what/what.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import { HistoryComponent } from './history/history.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -13,16 +13,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MoreWhyComponent } from './more-why/more-why.component';
 import { FinallyComponent } from './finally/finally.component';
 import { RefsAndInspirationComponent } from './refs-and-inspiration/refs-and-inspiration.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   exports: [RouterModule],
   imports: [
-    AppRoutingModule,
+    RouterModule.forRoot(AppRoutes),
     BrowserModule,
     BrowserAnimationsModule
   ],
   declarations: [
-    HomeComponent,
+    HistoryComponent,
     AppComponent,
     HeaderComponent,
     WhatComponent,
@@ -31,7 +32,8 @@ import { RefsAndInspirationComponent } from './refs-and-inspiration/refs-and-ins
     WhyNotComponent,
     MoreWhyComponent,
     FinallyComponent,
-    RefsAndInspirationComponent
+    RefsAndInspirationComponent,
+    HomeComponent
   ],
   bootstrap: [AppComponent]
 })
