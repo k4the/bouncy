@@ -23,13 +23,21 @@ main {
 .relative {
   position: relative;
   overflow: hidden;
-  max-width: 990px;
+  max-width: 910px;
   margin: 0 auto;
   min-height: 100px;
 }
 
 .capitalise {
   text-transform: capitalize;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikeThrough {
+  text-decoration: line-through;
 }
 
 .container {
@@ -65,7 +73,7 @@ p {
 .page {
   position: relative;
   overflow: hidden;
-  max-width: 990px;
+  max-width: 910px;
   margin: 0 auto;
   min-height: 100px;
   padding: 10px 15px;
@@ -240,7 +248,7 @@ tr:nth-child(even) {
   .page {
     position: relative;
     overflow: hidden;
-    max-width: 990px;
+    max-width: 910px;
     margin: 0 auto;
     min-height: 100px;
   }

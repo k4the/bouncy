@@ -1,7 +1,6 @@
 header {
-    max-width: 990px;
+    max-width: 910px;
     margin: 0 auto;
-    padding-top: 10px;
     padding-bottom: 22px;
     overflow: hidden;
 }
@@ -76,7 +75,7 @@ nav {
     }
     .navItem {
         display: inline-block;
-        padding: 6px 0 2px 0;
+        padding: 6px 0 0 0;
         border-bottom: none;
         height: auto;
         text-align: left;
@@ -89,22 +88,20 @@ nav {
     }
     .navItem.home,
     .navItem.home:visited {
-      padding: 0;
-      display: block;
-      position: absolute;
-      top: -10px;
-      font-size: 30px;
+        padding: 0;
+        display: block;
+        position: absolute;
+        top: -10px;
+        font-size: 30px;
     }
-
     .navItem.home.active,
     .navItem.home:hover {
         border-bottom: none;
         color: black;
     }
-
     .navItem.second,
     .navItem.second:visited {
-      margin-left: 60px;
+        margin-left: 60px;
     }
 }
 
@@ -113,8 +110,8 @@ nav {
     position: absolute;
     right: 15px;
     top: 10px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: none;
 }
 
@@ -124,7 +121,7 @@ nav {
 
 .fa-hand-point-left,
 .fa-hand-point-right {
-    font-size: 46px;
+    font-size: 40px;
 }
 
 @media only screen and (min-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1) {
