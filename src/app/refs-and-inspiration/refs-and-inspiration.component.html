@@ -1,8 +1,11 @@
 <div class="page">
-    <h1>Referencess &amp; Inspiration</h1>
-    <h2 class="wwwh">zzzzzzz docs and dancing shuffle sorts</h2>
-    <h3>What other people say</h3>
-    <p>
-
-    </p>
-    </div>
+  <h1>Referencess &amp; Inspiration</h1>
+  <h2 class="wwwh">from zzzzzzz docs to Irish dancing shuffle sorts</h2>
+  <h3>What other people say</h3>
+  <ul class="refs">
+    <li *ngFor="let link of links">
+      <div class="title"><a [href]="link.url">{{link.title}}</a></div>
+      <div class="author">{{link.author}}</div>
+    </li>
+  </ul>
+</div>
