@@ -11,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MoreWhyComponent } from './more-why/more-why.component';
-import { FinallyComponent } from './finally/finally.component';
+import { FutureComponent } from './future/future.component';
 import { RefsAndInspirationComponent } from './refs-and-inspiration/refs-and-inspiration.component';
 import { HomeComponent } from './home/home.component';
 
@@ -31,7 +31,7 @@ import { HomeComponent } from './home/home.component';
     WhyComponent,
     WhyNotComponent,
     MoreWhyComponent,
-    FinallyComponent,
+    FutureComponent,
     RefsAndInspirationComponent,
     HomeComponent
   ],

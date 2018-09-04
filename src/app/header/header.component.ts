@@ -41,7 +41,7 @@ export class HeaderComponent {
     if (this.location.path() === '') {
       path = '/' + this.appRoutes[1].path;
     } else {
-      index = this.getIndex();
+      index = this.getIndex(this.max);
       if (index) {
         path = '/' + this.appRoutes[index + 1].path;
       }
@@ -53,11 +53,11 @@ export class HeaderComponent {
 
   backPage(): void {
     let path = '';
-    let index = 1;
+    let index = 0;
     if (this.location.path() === '') {
       path = '/' + this.appRoutes[this.max].path;
     } else {
-      index = this.getIndex();
+      index = this.getIndex(this.max + 1);
       if (index) {
         path = '/' + this.appRoutes[index - 1].path;
       }
@@ -73,9 +73,9 @@ export class HeaderComponent {
       : (this.spinState = 'forward');
   }
 
-  private getIndex(): number {
+  private getIndex(max: number): number {
     const path = this.location.path().substring(1);
-    for (let i = 0; i < this.max; i++) {
+    for (let i = 0; i < max; i++) {
       if (this.appRoutes[i].path === path) {
         return i;
       }

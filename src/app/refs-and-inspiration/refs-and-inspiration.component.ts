@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ScrollBox } from '../scroll-box';
 
 @Component({
   selector: 'app-refs-and-inspiration',
   templateUrl: './refs-and-inspiration.component.html',
   styleUrls: ['./refs-and-inspiration.component.scss']
 })
-export class RefsAndInspirationComponent implements OnInit {
+export class RefsAndInspirationComponent implements OnInit, OnDestroy {
 
   links: any[] = [
     {
@@ -38,6 +39,16 @@ export class RefsAndInspirationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      const body = document.getElementsByTagName('html')[0];
+      body.classList.add('code');
+      const sb = new ScrollBox();
+      sb.createScrollBox();
+    }, 0);
   }
 
+  ngOnDestroy() {
+    const body = document.getElementsByTagName('html')[0];
+    body.classList.remove('code');
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollBox } from '../scroll-box';
 
 @Component({
   selector: 'app-more-why',
@@ -10,6 +11,9 @@ export class MoreWhyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      const sb = new ScrollBox();
+      sb.createScrollBox();
+    }, 0);
   }
-
 }

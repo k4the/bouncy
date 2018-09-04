@@ -1,11 +1,21 @@
 <div class="page">
-  <h1>Referencess &amp; Inspiration</h1>
-  <h2 class="wwwh">from zzzzzzz docs to Irish dancing shuffle sorts</h2>
+  <h1>References</h1>
+  <h2 class="wwwh">docs &amp; sorts</h2>
   <h3>What other people say</h3>
-  <ul class="refs">
-    <li *ngFor="let link of links">
-      <div class="title"><a [href]="link.url">{{link.title}}</a></div>
-      <div class="author">{{link.author}}</div>
-    </li>
-  </ul>
+  <div class="scrollBox">
+    <div class="container">
+      <div class="flex1">
+        <ul class="refs">
+          <li *ngFor="let link of links">
+            <div class="title"><a [href]="link.url">{{link.title}}</a></div>
+            <div class="author">{{link.author}}</div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex1 right">
+        <iframe width="316" height="200" src="https://www.youtube.com/embed/nK_o13c-0lk?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 </div>
