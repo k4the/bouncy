@@ -10,7 +10,7 @@ export class RefsAndInspirationComponent implements OnInit, OnDestroy {
 
   links: any[] = [
     {
-      title: 'Advantages Of Decoupling Application Front-End From Back-End',
+      title: 'Advantages Of Decoupling Front-End From Back-End',
       author: 'Abhinav Asthana, CEO & Co-founder of Postman',
       url: 'https://www.expresscomputer.in/news/advantages-of-decoupling-application-front-end-from-back-end/24245/'
     },
@@ -33,6 +33,21 @@ export class RefsAndInspirationComponent implements OnInit, OnDestroy {
       title: 'HTML5',
       author: 'Wikipedia',
       url: 'https://en.wikipedia.org/wiki/HTML5'
+    },
+    {
+      title: 'Service workers in Angular',
+      author: 'Angular',
+      url: 'https://angular.io/guide/service-worker-intro'
+    },
+    {
+      title: 'Angular Universal: server-side rendering',
+      author: 'Angular',
+      url: 'https://angular.io/guide/universal'
+    },
+    {
+      title: 'Lazy Loading Feature Modules',
+      author: 'Angular',
+      url: 'https://angular.io/guide/lazy-loading-ngmodules'
     }
   ];
 
